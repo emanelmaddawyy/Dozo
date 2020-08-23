@@ -1,0 +1,140 @@
+@font-face {
+  font-family: 'CairoFont';
+  src: url("../fonts/Cairo-Regular.ttf");
+}
+
+* {
+  font-family: 'CairoFont';
+  font-style: normal;
+  font-weight: 200;
+  src: local("Oswald ExtraLight"), local("Oswald-ExtraLight"), url(https://fonts.gstatic.com/s/oswald/v16/TK3hWkUHHAIjg75-1h4Tvs9CE5Q.woff2) format("woff2");
+  unicode-range: U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+  direction: rtl;
+}
+
+body {
+  height: 100%;
+  min-height: 100%;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0 !important;
+}
+
+a {
+  text-decoration: none !important;
+}
+
+.btn-success {
+  background: #000 !important;
+  border-color: #000 !important;
+}
+
+p {
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+.collapse:not(.show) {
+  display: none;
+}
+
+.nav-toggle {
+  display: none;
+}
+
+.btn-secondary.focus, .btn-secondary:focus {
+  -webkit-box-shadow: none !important;
+          box-shadow: none !important;
+}
+
+.navBar {
+  background: #2461A1 !important;
+}
+
+.nav {
+  color: #fff !important;
+}
+
+.inputSearch {
+  width: 40%;
+  margin: 0 30px;
+}
+
+.controlDrop {
+  height: 30px !important;
+}
+
+button.controlDrop.btn.btn-secondary {
+  color: #dadddf;
+  background: #fff;
+  border: 0;
+  border-top-right-radius: 0 !important;
+  border-bottom-right-radius: 0 !important;
+  border-top-left-radius: 5px !important;
+  border-bottom-left-radius: 5px !important;
+  padding: 0 5px !important;
+}
+
+input.controlDrop.form-control {
+  border: 0 !important;
+}
+
+button.dropdown-toggle.btn.btn-secondary {
+  padding: 0 5px !important;
+  border-top-right-radius: 5px !important;
+  border-bottom-right-radius: 5px !important;
+  font-size: 14px;
+  background-color: #F77027;
+  border: 0 !important;
+}
+
+.navbar-expand-md .navbar-nav .nav-link {
+  color: #fff;
+  padding: 0 10px;
+}
+
+li.nav-item::after {
+  content: "";
+  display: block;
+  width: 1px;
+  height: 12px;
+  border-right: 1px solid #fff;
+  position: absolute;
+  top: 23px;
+  opacity: .35;
+}
+
+li.nav-item:nth-child(1)::after {
+  opacity: 0 !important;
+}
+
+.dropdown-item.active, .dropdown-item:active {
+  background-color: #F77027;
+}
+
+a:not([href]):not([tabindex]):focus, a:not([href]):not([tabindex]):hover {
+  color: #fff !important;
+}
+
+.controlDrop.input-group-append button::after {
+  -webkit-transition: -webkit-transform .5s ease;
+  transition: -webkit-transform .5s ease;
+  transition: transform .5s ease;
+  transition: transform .5s ease, -webkit-transform .5s ease;
+  margin-right: 10px;
+  margin-left: .255em;
+  vertical-align: 0.1em;
+  border-top: .4em solid;
+  border-right: .4em solid transparent;
+  border-bottom: 0;
+  border-left: .4em solid transparent;
+}
+
+.controlDrop.input-group-append.show button::after {
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+}
+/*# sourceMappingURL=Header.css.map */

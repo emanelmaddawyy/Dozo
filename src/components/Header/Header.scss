@@ -1,0 +1,85 @@
+
+@import '../../css/main.scss' ;
+
+
+.navBar{
+    background:$first-header !important;
+}
+.nav{
+color:#fff!important;
+}
+.inputSearch{
+    width: 40%;
+    margin:0 30px;
+}
+.controlDrop{
+    height: 30px !important;
+   
+}
+button.controlDrop.btn.btn-secondary {
+    color: #dadddf;
+    background: #fff;
+    border: 0;
+    border-top-right-radius: 0 !important;
+    border-bottom-right-radius: 0 !important;
+    border-top-left-radius: 5px !important;
+    border-bottom-left-radius: 5px !important;
+    padding: 0 5px !important;
+}
+input.controlDrop.form-control{
+    border:0 !important;
+}
+button.dropdown-toggle.btn.btn-secondary{
+    padding: 0 5px !important;
+    border-top-right-radius: 5px !important;
+    border-bottom-right-radius: 5px !important;
+    font-size:14px;
+    background-color: $secondary-color;
+    border:0 !important;
+}
+.navbar-expand-md .navbar-nav .nav-link{
+    color:#fff;
+    padding: 0 10px;
+  
+}
+li.nav-item
+{
+    &::after{
+    content: "";
+    display: block;
+    width: 1px;
+    height: 12px;
+    border-right: 1px solid #fff;
+    position: absolute;
+    top: 23px;
+    opacity: .35;
+ 
+   
+}
+}
+li.nav-item:nth-child(1)::after{
+    opacity:  0 !important;
+ 
+}
+
+.dropdown-item.active, .dropdown-item:active{
+    background-color: $secondary-color;
+}
+a:not([href]):not([tabindex]):focus, a:not([href]):not([tabindex]):hover{
+    color: #fff !important;
+}
+.controlDrop.input-group-append button::after{
+    transition: transform .5s ease;
+    margin-right: 10px;
+    margin-left: .255em;
+    vertical-align: 0.1em;
+    border-top: .4em solid;
+    border-right: .4em solid transparent;
+    border-bottom: 0;
+    border-left: .4em solid transparent;
+}
+.controlDrop.input-group-append.show button::after{
+    transform: rotate(180deg);
+}
+
+
