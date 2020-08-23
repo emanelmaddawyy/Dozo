@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import Header from '../../components/Header/Header'
 import CategoriesHeader from '../../components/CategoriesHeader/CategoriesHeader';
-import Slider from '../../components/Slider/Slider'
+import Slider from '../../components/Slider/slider'
 import { connect } from 'react-redux';
 import { saveCategories } from '../../store/actions/actions';
 import { getCategories } from '../../api/data'
