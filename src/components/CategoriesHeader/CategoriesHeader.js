@@ -1,26 +1,21 @@
 import React, { Component } from 'react';
 import { Dropdown, DropdownToggle, DropdownMenu, DropdownItem } from 'reactstrap';
 import { connect } from 'react-redux';
-import { saveCategories } from '../../store/actions/actions';
-import { getCategories } from '../../api/data'
-
 
 class CategoriesHeader extends Component {
-  state = {
-    categories: []
-  }
-
-  async componentDidMount() {
-    const categories = await getCategories();
-    this.setState({
-      categories: categories
-    })
-  }
-
   render() {
-    return (
-      <h1>{this.props.categories}</h1>
-    )
+    return this.props.categories.map(category => {
+      return (
+        <div>
+          <h1>{category.title}</h1>
+          {category.subCategories.map(subCategory => {
+            return (
+              <h2>{subCategory.title}</h2>
+            );
+          })}
+        </div>
+      );
+    });
   }
 }
 
@@ -30,10 +25,4 @@ const mapStateToProps = (store) => {
   }
 }
 
-const mapDispatchToProps = (dispatch) => {
-  return {
-    saveCategories: () => dispatch(saveCategories())
-  }
-}
-
-export default connect(mapStateToProps, mapDispatchToProps)(CategoriesHeader);
+export default connect(mapStateToProps)(CategoriesHeader);
