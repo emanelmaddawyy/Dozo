@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { Dropdown, DropdownToggle, DropdownMenu, DropdownItem, Nav } from 'reactstrap';
+import CategoryDropDown from './CategoryDropDown/CategoryDropDown';
 import { connect } from 'react-redux';
 import './categoriesHeader.scss'
 
@@ -15,30 +16,17 @@ class CategoriesHeader extends Component {
     return (<Nav className="categoyHeader">
       {this.props.categories.map(category => {
         return (
-          <div>
-            <Dropdown className="controlDrop" addonType="append" isOpen={this.state.isOpen1} toggle={() => this.toggle1()}>
-              <DropdownToggle caret> {category.title}</DropdownToggle>
-              <DropdownMenu>
-                {category.subCategories.map(subCategory => {
-                  return (
-                    <DropdownItem key={subCategory.id}>{subCategory.title}</DropdownItem>
-                  );
-                })}
-              </DropdownMenu>
-              </Dropdown>
-        </div>
-      );
-     
-    })}
-   </Nav>
-        )
-
-      }
+          <CategoryDropDown key={category.id} category={category} />
+        );
+      })}
+    </Nav>
+    )
+  }
 }
 
 const mapStateToProps = (store) => {
   return {
-        categories: store.categories
+    categories: store.categories
   }
 }
 
