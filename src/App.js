@@ -1,30 +1,24 @@
 import React, { Component } from 'react';
-import { Switch,  BrowserRouter as Router ,Route, BrowserRouter} from 'react-router-dom';
+import { Switch, BrowserRouter as Router, Route, BrowserRouter } from 'react-router-dom';
 import './App.css';
-import HomePage from './pages/Home'
+import HomePage from './pages/Home/HomePage'
 import { Provider } from 'react-redux';
 import store from './store/store'
 
-
 class App extends Component {
-  
-render() {
-
-  return (
-   <Provider store={store}>
-    
-      <Router>
+  render() {
+    return (
+      <Provider store={store}>
+        <Router>
           <div className="App">
-          <Switch>
-               <Route path='/' exact component={HomePage}/>
-          </Switch>
+            <Switch>
+              <Route path='/' exact component={HomePage} />
+            </Switch>
           </div>
         </Router>
-   </Provider>
-       
+      </Provider>
+    );
+  }
+}
 
-  );
-  
-}
-}
 export default App;

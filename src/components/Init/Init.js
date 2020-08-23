@@ -3,16 +3,13 @@ import { getCategories } from '../../api/data'
 
 class Init extends Component {
     state = {
-
     }
 
     async componentDidMount() {
         const categories = await getCategories();
-        
     }
 
     render() {
-
     }
 }
 
