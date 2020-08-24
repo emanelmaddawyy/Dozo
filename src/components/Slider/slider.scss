@@ -1,0 +1,22 @@
+@import '../../css/main.scss' ;
+
+.carousel-indicators li{
+background-color: $main-color;
+opacity: 50%;
+width: 20px;
+height: 20px;
+border-radius: 50%;
+}
+.carousel-indicators .active{
+    background-color: $main-color;
+    opacity: 1;
+}
+.carousel-indicators{
+    bottom: -40px;
+}
+.carousel-caption {
+    display: none !important;
+}
+.carousel-item img{
+    height: 500px;
+}

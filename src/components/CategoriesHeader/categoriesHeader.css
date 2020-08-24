@@ -53,4 +53,32 @@ p {
 img.img-fluid {
   width: 100% !important;
 }
-/*# sourceMappingURL=main.css.map */
+
+.categoyHeader, .centerHeader {
+  background-color: #18417C;
+}
+
+.categoryDropdown.input-group-append button.dropdown-toggle.btn.btn-secondary {
+  padding: 20px 0 20px 30px !important;
+  font-size: 16px !important;
+}
+
+.categoryDropdown.input-group-append button:after {
+  -webkit-transition: -webkit-transform .5s ease;
+  transition: -webkit-transform .5s ease;
+  transition: transform .5s ease;
+  transition: transform .5s ease, -webkit-transform .5s ease;
+  margin-right: 10px;
+  margin-left: .255em;
+  vertical-align: 0.1em;
+  border-top: .4em solid;
+  border-right: .4em solid transparent;
+  border-bottom: 0;
+  border-left: .4em solid transparent;
+}
+
+.categoryDropdown.input-group-append.show button:after {
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+}
+/*# sourceMappingURL=categoriesHeader.css.map */

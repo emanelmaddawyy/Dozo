@@ -53,4 +53,29 @@ p {
 img.img-fluid {
   width: 100% !important;
 }
-/*# sourceMappingURL=main.css.map */
+
+.carousel-indicators li {
+  background-color: #18417C;
+  opacity: 50%;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+}
+
+.carousel-indicators .active {
+  background-color: #18417C;
+  opacity: 1;
+}
+
+.carousel-indicators {
+  bottom: -40px;
+}
+
+.carousel-caption {
+  display: none !important;
+}
+
+.carousel-item img {
+  height: 500px;
+}
+/*# sourceMappingURL=Slider.css.map */

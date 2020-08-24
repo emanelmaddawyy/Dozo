@@ -17,6 +17,7 @@ import {
   InputGroup,
   Input,
   InputGroupAddon,
+  Container,
 } from 'reactstrap';
 import '../../css/bootstrap.min.css'
 import './Header.scss'
@@ -64,73 +65,74 @@ class Header extends Component {
   render() {
     const selectedCategory = this.state.categories.find(item => item.id === this.state.selectedCategoryId);
     return (
-      <div>
-        <Navbar className="navBar" expand="md">
-          <NavbarBrand className="nav" href="/">LOGO BRAND</NavbarBrand>
-          <NavbarToggler onClick={() => this.toggle2()} />
-          <Collapse isOpen={this.state.isOpen2} navbar>
-            <InputGroup className="inputSearch controlDrop">
-              <InputGroupButtonDropdown className="controlDrop" addonType="append" isOpen={this.state.isOpen1} toggle={() => this.toggle1()}>
-                <DropdownToggle caret>
-                  {selectedCategory.title}
-                </DropdownToggle>
-                <DropdownMenu>
-                  {
-                    this.state.categories.map(item =>
-                      (
-                        <DropdownItem
-                          key={item.id}
-                          onClick={() => this.selectCategory(item.id)}>
-                          {item.title}
-                        </DropdownItem>)
-                    )
-                  }
-                </DropdownMenu>
-              </InputGroupButtonDropdown>
+      <div className="TopHeader">
+        <Container>
+          <Navbar className="navBar" expand="md">
+            <NavbarBrand className="nav" href="/">LOGO BRAND</NavbarBrand>
+            <NavbarToggler onClick={() => this.toggle2()} />
+            <Collapse isOpen={this.state.isOpen2} navbar>
+              <InputGroup className="inputSearch controlDrop">
+                <InputGroupButtonDropdown className="controlDrop" addonType="append" isOpen={this.state.isOpen1} toggle={() => this.toggle1()}>
+                  <DropdownToggle caret>
+                    {selectedCategory.title}
+                  </DropdownToggle>
+                  <DropdownMenu>
+                    {
+                      this.state.categories.map(item =>
+                        (
+                          <DropdownItem
+                            key={item.id}
+                            onClick={() => this.selectCategory(item.id)}>
+                            {item.title}
+                          </DropdownItem>)
+                      )
+                    }
+                  </DropdownMenu>
+                </InputGroupButtonDropdown>
 
-              <Input className="controlDrop" />
-              <InputGroupAddon addonType="append">
-                <Button className="controlDrop"><FontAwesomeIcon icon={faSearch} /></Button>
-              </InputGroupAddon>
-            </InputGroup>
+                <Input className="controlDrop" />
+                <InputGroupAddon addonType="append">
+                  <Button className="controlDrop"><FontAwesomeIcon icon={faSearch} /></Button>
+                </InputGroupAddon>
+              </InputGroup>
 
-            <Nav className="mr-auto" navbar>
-              <NavItem>
-                <NavLink to="/">
-                  <BootstrapNavLink><CountriesFilterHeader /> </BootstrapNavLink>
-                </NavLink>
-              </NavItem>
-              <NavItem>
-                <NavLink to="/lang">
-                  <BootstrapNavLink>English</BootstrapNavLink>
-                </NavLink>
-              </NavItem>
-              <NavItem>
-                <NavLink to="/request">
-                  <BootstrapNavLink><FontAwesomeIcon icon={faCopy} /> الطلبات</BootstrapNavLink>
-                </NavLink>
-              </NavItem>
-              <NavItem>
-                <NavLink to="/user">
-                  <BootstrapNavLink><FontAwesomeIcon icon={faUser} /></BootstrapNavLink>
-                </NavLink>
-              </NavItem>
-              <NavItem>
-                <NavLink to="/">
-                  <BootstrapNavLink><FontAwesomeIcon icon={faShoppingCart} /></BootstrapNavLink>
-                </NavLink>
-              </NavItem>
-            </Nav>
-            <NavbarText>
-              {/* Hi, {this.props.loginInfo.appUser.userName} */}
-            </NavbarText>
+              <Nav className="mr-auto" navbar>
+                <NavItem>
+                  <NavLink to="/">
+                    <BootstrapNavLink><CountriesFilterHeader /> </BootstrapNavLink>
+                  </NavLink>
+                </NavItem>
+                <NavItem>
+                  <NavLink to="/lang">
+                    <BootstrapNavLink>English</BootstrapNavLink>
+                  </NavLink>
+                </NavItem>
+                <NavItem>
+                  <NavLink to="/request">
+                    <BootstrapNavLink><FontAwesomeIcon icon={faCopy} /> الطلبات</BootstrapNavLink>
+                  </NavLink>
+                </NavItem>
+                <NavItem>
+                  <NavLink to="/user">
+                    <BootstrapNavLink><FontAwesomeIcon icon={faUser} /></BootstrapNavLink>
+                  </NavLink>
+                </NavItem>
+                <NavItem>
+                  <NavLink to="/">
+                    <BootstrapNavLink><FontAwesomeIcon icon={faShoppingCart} /></BootstrapNavLink>
+                  </NavLink>
+                </NavItem>
+              </Nav>
+              <NavbarText>
+                {/* Hi, {this.props.loginInfo.appUser.userName} */}
+              </NavbarText>
 
-            <NavbarText>
+              <NavbarText>
 
-            </NavbarText>
-          </Collapse>
-        </Navbar>
-
+              </NavbarText>
+            </Collapse>
+          </Navbar>
+        </Container>
       </div>
     );
   }

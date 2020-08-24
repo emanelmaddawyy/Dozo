@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Dropdown, DropdownToggle, DropdownMenu, DropdownItem, Nav } from 'reactstrap';
+import { Dropdown, DropdownToggle, DropdownMenu, DropdownItem, Nav, Row } from 'reactstrap';
 import './CategoryDropDown.scss'
 
 class CategoryDropDown extends Component {
@@ -18,14 +18,18 @@ class CategoryDropDown extends Component {
     const category = this.props.category;
 
     return (
-      <Dropdown className="controlDrop" addonType="append" isOpen={this.state.isOpen} toggle={() => this.toggle()}>
+      <Dropdown className="categoryDropdown" addonType="append" isOpen={this.state.isOpen} toggle={() => this.toggle()}>
         <DropdownToggle caret> {category.title}</DropdownToggle>
         <DropdownMenu>
-          {category.subCategories.map(subCategory => {
-            return (
-              <DropdownItem key={subCategory.id}>{subCategory.title}</DropdownItem>
-            );
-          })}
+          <Row>
+            {category.subCategories.map(subCategory => {
+              return (
+                <div className="col-md-3 col-sm-6 col-xs-6 nav-block">
+                  <DropdownItem key={subCategory.id}>{subCategory.title}</DropdownItem>
+                </div>
+              );
+            })}
+          </Row>
         </DropdownMenu>
       </Dropdown>
     );

@@ -50,6 +50,10 @@ p {
           box-shadow: none !important;
 }
 
+img.img-fluid {
+  width: 100% !important;
+}
+
 .navBar {
   background: #2461A1 !important;
 }
@@ -136,5 +140,18 @@ a:not([href]):not([tabindex]):focus, a:not([href]):not([tabindex]):hover {
 .controlDrop.input-group-append.show button::after {
   -webkit-transform: rotate(180deg);
           transform: rotate(180deg);
+}
+
+.TopHeader {
+  width: 100%;
+  background-color: #2461A1;
+}
+
+.navbar {
+  padding-right: 0 !important;
+}
+
+a.nav.navbar-brand {
+  margin: 0 !important;
 }
 /*# sourceMappingURL=Header.css.map */

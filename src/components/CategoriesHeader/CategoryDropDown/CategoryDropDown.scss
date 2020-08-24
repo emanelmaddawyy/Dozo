@@ -1,0 +1,9 @@
+@import '../../../css/main.scss' ;
+
+.categoryDropdown.input-group-append{
+    background-color: $main-color;
+    button.dropdown-toggle.btn.btn-secondary{
+    background-color: $main-color;
+    ;
+    }
+}

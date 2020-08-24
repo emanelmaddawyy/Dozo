@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Dropdown, DropdownToggle, DropdownMenu, DropdownItem, Nav } from 'reactstrap';
+import { Dropdown, DropdownToggle, DropdownMenu, DropdownItem, Nav, Container } from 'reactstrap';
 import CategoryDropDown from './CategoryDropDown/CategoryDropDown';
 import { connect } from 'react-redux';
 import './categoriesHeader.scss'
@@ -13,13 +13,17 @@ class CategoriesHeader extends Component {
   }
 
   render() {
-    return (<Nav className="categoyHeader">
+    return (<div className="centerHeader">
+    <Container> 
+      <Nav className="categoyHeader">
       {this.props.categories.map(category => {
         return (
-          <CategoryDropDown key={category.id} category={category} />
+          <CategoryDropDown key={category.id} category={category} className="controlDrop"/>
         );
       })}
     </Nav>
+    </Container>
+    </div>
     )
   }
 }

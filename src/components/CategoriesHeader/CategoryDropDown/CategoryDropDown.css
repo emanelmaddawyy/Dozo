@@ -53,4 +53,12 @@ p {
 img.img-fluid {
   width: 100% !important;
 }
-/*# sourceMappingURL=main.css.map */
+
+.categoryDropdown.input-group-append {
+  background-color: #18417C;
+}
+
+.categoryDropdown.input-group-append button.dropdown-toggle.btn.btn-secondary {
+  background-color: #18417C;
+}
+/*# sourceMappingURL=CategoryDropDown.css.map */

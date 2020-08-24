@@ -1,17 +1,24 @@
 import React, { Component } from 'react';
 import Header from '../../components/Header/Header'
 import CategoriesHeader from '../../components/CategoriesHeader/CategoriesHeader';
-import Slider from '../../components/Slider/Slider'
+import Slider from '../../components/Slider/Slider';
 import { connect } from 'react-redux';
 import { saveCategories } from '../../store/actions/actions';
 import { getCategories } from '../../api/data'
 
 class HomePage extends Component {
+  state = {
+    categories: null
+  }
+
   async componentDidMount() {
-    if (!this.props.categories) {
-      const categories = await getCategories();
-      this.props.saveCategories(categories);
-    }
+    const categories = await getCategories();
+    this.props.saveCategories(categories);
+
+    this.setState({
+      ...this.state,
+      categories
+    });
   }
 
   render() {

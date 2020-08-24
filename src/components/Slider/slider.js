@@ -6,7 +6,7 @@ import {
   CarouselIndicators,
   CarouselCaption
 } from 'reactstrap';
-
+import './Slider.scss'
 const items = [
   {
     src: '/smartphone-banner_updated.jpg',
