@@ -3,7 +3,7 @@ import Header from '../../components/Header/Header'
 import CategoriesHeader from '../../components/CategoriesHeader/CategoriesHeader';
 import Slider from '../../components/Slider/Slider';
 import { connect } from 'react-redux';
-import { saveCategories } from '../../store/actions/actions';
+import { saveCategories } from '../../store/actions/categories';
 import { getCategories } from '../../api/data'
 
 class HomePage extends Component {
@@ -34,7 +34,7 @@ class HomePage extends Component {
 
 const mapStateToProps = (store) => {
   return {
-    categories: store.categories
+    categories: store.categoriesReducer.categories
   }
 }
 

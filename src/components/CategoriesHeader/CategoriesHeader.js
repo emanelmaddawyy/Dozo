@@ -30,7 +30,7 @@ class CategoriesHeader extends Component {
 
 const mapStateToProps = (store) => {
   return {
-    categories: store.categories
+    categories: store.categoriesReducer.categories
   }
 }
 

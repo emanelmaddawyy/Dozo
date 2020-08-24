@@ -1,6 +1,6 @@
 import { SAVE_CATEGORIES } from "../actions/types";
 
-export default function categoriesReducer(state, action){
+export default function categoriesReducer(state, action) {
     switch (action.type) {
         case SAVE_CATEGORIES: {
             return {
@@ -8,7 +8,7 @@ export default function categoriesReducer(state, action){
                 categories: action.categories
             };
         }
-        default :
-            return state;
+        default:
+            return state || {};
     }
 }
